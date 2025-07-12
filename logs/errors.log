@@ -1,0 +1,10 @@
+2025-07-12 22:16:19,292 - INFO - ✅ Scraping complete and saved to data/english_movies.csv
+2025-07-12 22:16:21,437 - INFO - drop_down opened
+2025-07-12 22:16:27,241 - INFO - Selected option
+2025-07-12 22:16:28,048 - INFO - ✅ Scraping complete and saved to data/non_english_movies.csv
+2025-07-12 22:16:30,148 - INFO - drop_down opened
+2025-07-12 22:16:35,777 - INFO - Selected option
+2025-07-12 22:16:36,721 - INFO - ✅ Scraping complete and saved to data/english_series.csv
+2025-07-12 22:16:38,820 - INFO - drop_down opened
+2025-07-12 22:16:43,631 - INFO - Selected option
+2025-07-12 22:16:44,506 - INFO - ✅ Scraping complete and saved to data/non_english_series.csv
