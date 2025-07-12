@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🍿 Netflix Top 10 Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+        h1 { color: #d9230f; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #d9230f; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>🍿 Netflix Top 10 Dashboard</h1>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Views</th>
+            <th>Runtime</th>
+            <th>Hours Viewed</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.category }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.views }}</td>
+            <td>{{ item.runtime }}</td>
+            <td>{{ item.hours }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

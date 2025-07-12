@@ -8,6 +8,17 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from utils.helpers import save_to_csv
+import logging
+# Logging setup
+LOG_DIR="logs"
+LOG_FILE=os.path.join(LOG_DIR,"errors.log")
+os.makedirs(LOG_DIR,exist_ok=True)
+logging.basicConfig(
+    filename=LOG_FILE,
+    filemode='a',
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
 
 # Create data directory if doesn't exist
 """
@@ -79,9 +90,9 @@ def scrape(file_name):
         })
     try:
         save_to_csv(data,file_name)
-        print(f"✅ Scraping complete and saved to data/{file_name}")
+        logging.info(f"✅ Scraping complete and saved to data/{file_name}")
     except Exception as e:
-        print("❌ Failed to save CSV: %s", str(e))
+        logging.error("❌ Failed to save CSV: %s", str(e))
 def open_dropdown():
     try:
         key=WebDriverWait(driver,10).until(
@@ -89,9 +100,9 @@ def open_dropdown():
     )
         key.click()
         time.sleep(2)
-        print("drop_down opened")
+        logging.info("drop_down opened")
     except Exception as e:
-        print(f"lora {str(e)}")
+        logging.error(f"failed {str(e)}")
 
 def category1():
     try:
@@ -99,9 +110,9 @@ def category1():
         EC.element_to_be_clickable((By.XPATH,"//*[@id=':ra:-1']"))
     )
         option.click()
-        print("Selected option")
+        logging.info("Selected option")
     except Exception as e:
-        print("not selected")
+        logging.error("not selected")
 
 
 
@@ -111,9 +122,9 @@ def category2():
         EC.element_to_be_clickable((By.XPATH,"//*[@id=':ra:-2']"))
     )
         option.click()
-        print("Selected option")
+        logging.info("Selected option")
     except Exception as e:
-        print("not selected")
+        logging.error("not selected")
 
 
 
@@ -124,9 +135,9 @@ def category3():
         EC.element_to_be_clickable((By.XPATH,"//*[@id=':ra:-3']"))
     )
         option.click()
-        print("Selected option")
+        logging.info("Selected option")
     except Exception as e:
-        print("not selected")
+        logging.error("not selected")
 
 
 
