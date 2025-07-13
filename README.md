@@ -3,8 +3,6 @@
 A sleek and professional Python project that scrapes the official Netflix Top 10 lists (Movies & Series — English and Non-English) and displays the data on a clean Flask dashboard. Data is saved in categorized CSVs for easy reference and visualization.
 
 ---
-## 🖼️ Dashboard Preview
-![Dashboard Screenshot](images/image.png)
 
 ## 🚀 Features
 
