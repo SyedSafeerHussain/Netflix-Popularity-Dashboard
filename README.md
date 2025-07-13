@@ -25,7 +25,7 @@ A sleek and professional Python project that scrapes the official Netflix Top 10
 
 ## 🖼️ Dashboard Preview
 
-![Dashboard Screenshot](images/dashboard.png)
+![Dashboard Screenshot](images/image.png)
 
 ---
 
